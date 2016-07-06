@@ -132,7 +132,7 @@ Sidekiq.default_worker_options = {
 
 Sometimes it is desired to have a finer control over which arguments are used in determining uniqueness of the job, and others may be _transient_. For this use-case, you need to define either a `unique_args` method, or a ruby proc.
 
-The unique_args method need to return an array of values to use for uniqueness check.
+The unique_args method need to return a serializable value to use for uniqueness check.
 
 The method or the proc can return a modified version of args without the transient arguments included, as shown below:
 
